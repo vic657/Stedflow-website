@@ -134,9 +134,14 @@ export const IosWaitlistModal: React.FC<IosWaitlistModalProps> = ({ isOpen, onCl
                 href="https://play.google.com/store/apps/details?id=com.stedflo.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-[#234E53] underline ml-1"
+                className="font-bold text-[#234E53] underline ml-1 inline-flex items-center gap-1 align-baseline"
               >
-                Google Play Store →
+                <img
+                  src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
+                  alt="Google Play"
+                  className="w-3.5 h-3.5 inline-block"
+                />
+                <span>Google Play Store →</span>
               </a>
             </div>
             <button

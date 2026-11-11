@@ -181,12 +181,14 @@ npm run lint
 ├── public/
 │   └── assets/
 │       └── aistudio/
-│           ├── stedflo-app-icon_2838e1d9.png             # Official App Icon
-│           ├── stedflo-logo-horizontal_b2058b01.png       # Dark Wordmark (Header)
-│           ├── stedflo-logo-horizontal-white_19fe58b6.png # White Wordmark (Footer)
-│           ├── finance_c491e411.svg                       # Tax & Runway Illustration
-│           ├── schedule_d51ab499.svg                      # Shift Tracking Illustration
-│           └── SmartphoneApplicationFeatures_a310831c.svg # Mobile Features Illustration
+│           ├── stedflo-app-icon_2838e1d9.png                  # Official App Icon
+│           ├── stedflo-logo-horizontal_b2058b01.png            # Dark Wordmark (Header)
+│           ├── stedflo-logo-horizontal-white_19fe58b6.png      # White Wordmark (Footer)
+│           ├── logo-google-playstore-svgrepo-com_e4164103.svg  # Official Google Play Icon
+│           ├── WhatsApp_Image_2026-10-06...5451e02b.jpeg       # Mobile App Dashboard Screenshot
+│           ├── finance_c491e411.svg                            # Tax & Runway Illustration
+│           ├── schedule_d51ab499.svg                           # Shift Tracking Illustration
+│           └── SmartphoneApplicationFeatures_a310831c.svg      # Mobile Features Illustration
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.tsx             # Sticky 3-zone header & mobile drawer

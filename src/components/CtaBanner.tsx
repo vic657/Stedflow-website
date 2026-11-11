@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Sparkles, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Rocket, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 interface CtaBannerProps {
   onOpenIosModal: () => void;
@@ -41,7 +41,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenIosModal }) => {
 
             {/* Pill kicker */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-[#B7EF4A] mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-[#B7EF4A]" />
+              <Rocket className="w-3.5 h-3.5 text-[#B7EF4A]" />
               <span>Available Now on Android · iOS Coming Soon</span>
             </div>
 
@@ -65,9 +65,11 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenIosModal }) => {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-6 py-4 rounded-2xl bg-[#B7EF4A] text-[#102629] font-bold text-sm hover:bg-[#a6e038] active:scale-95 transition-all shadow-[0_4px_24px_rgba(183,239,74,0.35)]"
               >
-                <svg className="w-5 h-5 fill-current text-[#102629]" viewBox="0 0 24 24">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.61-.913V2.727c.18-.344.402-.656.609-.913zM15.207 13.414l2.424 2.425-11.758 6.786 9.334-9.211zm0-2.828L5.873 1.375l11.758 6.786-2.424 2.425zm1.414 1.414l3.146-1.815c1.026-.593 1.026-1.56 0-2.152l-3.146-1.816-2.122 2.122 2.122 2.122z"/>
-                </svg>
+                <img
+                  src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
+                  alt="Google Play"
+                  className="w-5 h-5 object-contain"
+                />
                 <span>Download on Google Play</span>
                 <ArrowUpRight className="w-4 h-4 opacity-75" />
               </a>

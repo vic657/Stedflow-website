@@ -89,9 +89,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#173539] text-white text-xs font-semibold hover:bg-[#234E53] active:scale-[0.98] transition-all shadow-[0_2px_10px_rgba(23,53,57,0.18)] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7EF4A]"
             >
-              <svg className="w-4 h-4 fill-current text-[#B7EF4A]" viewBox="0 0 24 24">
-                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.61-.913V2.727c.18-.344.402-.656.609-.913zM15.207 13.414l2.424 2.425-11.758 6.786 9.334-9.211zm0-2.828L5.873 1.375l11.758 6.786-2.424 2.425zm1.414 1.414l3.146-1.815c1.026-.593 1.026-1.56 0-2.152l-3.146-1.816-2.122 2.122 2.122 2.122z"/>
-              </svg>
+              <img
+                src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
+                alt="Google Play"
+                className="w-4 h-4 object-contain brightness-0 invert"
+              />
               <span>Get App</span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
             </a>
@@ -105,6 +107,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#173539] text-white text-xs font-semibold"
             >
+              <img
+                src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
+                alt="Google Play"
+                className="w-3.5 h-3.5 object-contain brightness-0 invert"
+              />
               <span>Get App</span>
             </a>
             <button
@@ -162,9 +169,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
                 href="https://play.google.com/store/apps/details?id=com.stedflo.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center py-2.5 px-4 rounded-xl bg-[#173539] text-white font-semibold text-sm hover:bg-[#234E53]"
+                className="w-full inline-flex items-center justify-center gap-2 text-center py-2.5 px-4 rounded-xl bg-[#173539] text-white font-semibold text-sm hover:bg-[#234E53]"
               >
-                Download on Google Play
+                <img
+                  src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
+                  alt="Google Play"
+                  className="w-4 h-4 object-contain brightness-0 invert"
+                />
+                <span>Download on Google Play</span>
               </a>
               <button
                 onClick={() => {
