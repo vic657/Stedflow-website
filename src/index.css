@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-ink: #173539;
+  --color-midnight: #102629;
+  --color-forest: #234E53;
+  --color-forest-light: #36656B;
+  --color-leaf: #4E9B56;
+  --color-leaf-light: #75B06F;
+  --color-lime: #B7EF4A;
+  --color-lime-glow: #B7EF4A;
+  --color-pale-glow: #F0F8A4;
+  --color-mist: #F7F9F3;
+  --color-muted-text: #5E7875;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom subtle glass and glow effects */
+.radial-mist-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(183, 239, 74, 0.15), rgba(240, 248, 164, 0.08) 45%, transparent 70%);
+}
+
+.radial-dark-glow {
+  background: radial-gradient(circle at 60% 40%, rgba(183, 239, 74, 0.12), rgba(35, 78, 83, 0.3) 50%, transparent 80%);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Stedflo | Calm Personal Finance & Payday Safety Runway",
+  "description": "Know exactly what's safe to spend before payday. Stedflo connects your shifts, salary, bills, and savings into one calm runway.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
