@@ -1,11 +1,12 @@
+import { ApkDownloadLink } from './ApkDownloadLink';
 import React from 'react';
-import { ShieldCheck, EyeOff, Zap, ChevronRight, Sparkles } from 'lucide-react';
+import { ShieldCheck, EyeOff, Zap, Sparkles } from 'lucide-react';
 
 interface HeroProps {
-  onOpenIosModal: () => void;
+  onOpenIosAvailability: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenIosAvailability }) => {
   const runwayDays = 14;
 
   return (
@@ -57,32 +58,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
             {/* Dual Store Download CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
               
-              {/* Google Play Store Badge */}
-              <a
-                href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3.5 px-5 py-3.5 rounded-2xl bg-[#173539] text-white hover:bg-[#234E53] active:scale-[0.98] transition-all shadow-[0_4px_20px_rgba(23,53,57,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7EF4A]"
-              >
-                <div className="w-7 h-7 flex items-center justify-center shrink-0">
-                  <img
-                    src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
-                    alt="Google Play"
-                    className="w-6 h-6 object-contain brightness-0 invert group-hover:scale-110 transition-transform"
-                  />
-                </div>
-                <div className="text-left">
-                  <div className="text-[11px] uppercase tracking-wider text-neutral-300 font-medium">Get it on</div>
-                  <div className="text-sm font-bold tracking-tight text-white flex items-center gap-1">
-                    Google Play
-                    <ChevronRight className="w-3.5 h-3.5 text-[#B7EF4A] group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                </div>
-              </a>
+              {/* Android APK download */}
+              <ApkDownloadLink className="group flex items-center gap-3.5 px-5 py-3.5 rounded-2xl bg-[#173539] text-white hover:bg-[#234E53] active:scale-[0.98] transition-all shadow-[0_4px_20px_rgba(23,53,57,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7EF4A]" />
 
-              {/* Apple App Store (Coming Soon) Badge */}
+              {/* iOS availability notice */}
               <button
-                onClick={onOpenIosModal}
+                onClick={onOpenIosAvailability}
                 className="group flex items-center justify-between gap-3 px-5 py-3.5 rounded-2xl bg-white border border-[#173539]/15 text-[#173539] hover:border-[#173539]/30 hover:bg-[#F7F9F3] active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#234E53]"
               >
                 <div className="flex items-center gap-3">
@@ -92,12 +73,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
                     </svg>
                   </div>
                   <div className="text-left">
-                    <div className="text-[11px] uppercase tracking-wider text-[#5E7875] font-medium">Download on the</div>
-                    <div className="text-sm font-bold tracking-tight text-[#173539]">App Store</div>
+                    <div className="text-[11px] uppercase tracking-wider text-[#5E7875] font-medium">Availability</div>
+                    <div className="text-sm font-bold tracking-tight text-[#173539]">iOS app</div>
                   </div>
                 </div>
                 <span className="text-[10px] font-semibold uppercase tracking-wider bg-[#173539]/10 text-[#173539] px-2 py-0.5 rounded-full ml-1 font-mono">
-                  Coming Soon (iOS)
+                  Not available
                 </span>
               </button>
 
@@ -107,11 +88,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-[#173539]/10 w-full text-xs text-[#5E7875] font-medium">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#4E9B56] shrink-0" />
-                <span>Bank-Grade Encryption</span>
+                <span>Plan Upcoming Bills</span>
               </div>
               <div className="flex items-center gap-2">
                 <EyeOff className="w-4 h-4 text-[#4E9B56] shrink-0" />
-                <span>Zero Ad-Broker Tracking</span>
+                <span>See Your Daily Runway</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4 text-[#4E9B56] shrink-0" />
@@ -139,7 +120,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
               </div>
               <div>
                 <div className="text-[11px] font-bold text-[#173539]">Bills Ring-Fenced</div>
-                <div className="text-[10px] text-[#5E7875]">Rent & WiFi 100% Covered</div>
+                <div className="text-[10px] text-[#5E7875]">Example rent & WiFi plan</div>
               </div>
             </div>
 
@@ -153,7 +134,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
                   <span>{runwayDays}-Day Runway</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#B7EF4A]"></span>
                 </div>
-                <div className="text-[10px] text-neutral-300">Calm cash flow ahead</div>
+                <div className="text-[10px] text-neutral-300">Illustrative app preview</div>
               </div>
             </div>
 
@@ -163,8 +144,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenIosModal }) => {
               {/* Inside Phone Screen (Native App Viewport) */}
               <div className="rounded-[36px] overflow-hidden relative bg-[#F7F9F3] shadow-inner border border-[#173539]/10">
                 <img
-                  src="/assets/aistudio/WhatsApp_Image_2026-10-06_at_11.39.14_PM_5451e02b.jpeg"
-                  alt="Stedflo Mobile App Dashboard - Hello Peter"
+                  src="/assets/aistudio/stedflo-dashboard-gbp.png"
+                  alt="Stedflo Mobile App Dashboard showing balances in British pounds"
                   className="w-full h-auto object-cover block rounded-[36px]"
                   loading="eager"
                 />

@@ -1,16 +1,17 @@
+import { ApkDownloadLink } from './ApkDownloadLink';
 import React, { useState } from 'react';
 import { Mail, Copy, Check, ArrowUpRight, Shield, Heart } from 'lucide-react';
 
 interface FooterProps {
   onOpenPrivacyModal: () => void;
-  onOpenIosModal: () => void;
+  onOpenIosAvailability: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosAvailability }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('support@stedflo.com');
+    navigator.clipboard.writeText('info@stedflo.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -34,26 +35,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosMod
             <p className="text-sm text-neutral-300 max-w-sm leading-relaxed">
               The calm financial companion. Connecting your shifts, salary, bills, and savings into one predictive payday safety runway.
             </p>
-            <div className="pt-2 flex items-center gap-3">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium border border-white/10 transition-colors"
-              >
-                <img
-                  src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
-                  alt="Google Play"
-                  className="w-3.5 h-3.5 object-contain brightness-0 invert"
-                />
-                <span>Google Play Store</span>
-                <ArrowUpRight className="w-3 h-3 text-[#B7EF4A]" />
-              </a>
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              <ApkDownloadLink className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium border border-white/10 transition-colors" />
               <button
-                onClick={onOpenIosModal}
+                onClick={onOpenIosAvailability}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium border border-white/10 transition-colors"
               >
-                <span>App Store (Coming Soon)</span>
+                <span>iOS availability</span>
               </button>
             </div>
           </div>
@@ -132,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosMod
             <div className="flex items-center gap-2 bg-white/5 border border-white/10 p-2 rounded-xl">
               <Mail className="w-4 h-4 text-[#B7EF4A] shrink-0" />
               <span className="text-xs text-neutral-200 select-all font-mono truncate">
-                support@stedflo.com
+                info@stedflo.com
               </span>
               <button
                 onClick={handleCopyEmail}
@@ -152,7 +140,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosMod
                 className="text-xs text-neutral-400 hover:text-white underline underline-offset-2 transition-colors flex items-center gap-1.5"
               >
                 <Shield className="w-3.5 h-3.5 text-[#4E9B56]" />
-                <span>Zero-Data-Selling Policy</span>
+                <span>Website privacy information</span>
               </button>
             </div>
           </div>
@@ -169,16 +157,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacyModal, onOpenIosMod
               onClick={onOpenPrivacyModal}
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
             >
-              Privacy Policy
+              Website Privacy
             </button>
             <button
               onClick={onOpenPrivacyModal}
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
             >
-              Security Commitment
+              Data Questions
             </button>
             <a
-              href="mailto:support@stedflo.com"
+              href="mailto:info@stedflo.com"
               className="hover:text-white transition-colors underline-offset-2 hover:underline"
             >
               Contact Us

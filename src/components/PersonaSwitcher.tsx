@@ -9,11 +9,11 @@ const personas: Record<string, PersonaData> = {
     iconName: 'Clock',
     badge: 'Irregular Rosters Solved',
     title: 'Transform unpredictable shift rosters into unbreakable bill safety.',
-    quote: '"I work 3 different shift differentials at Nairobi West Hospital. Before Stedflo, I never knew if my next check would cover rent. Now every hour logged updates my safe daily spend in real time."',
-    scenario: 'Grace K., ICU Nurse & Ward Shift Coordinator',
+    quote: "A shift worker can plan around day and night rates, estimate the next payout, and account for rent before daily spending.",
+    scenario: "Illustrative shift worker scenario",
     metrics: [
-      { label: 'Safe Daily Spend', value: 'KES 2,400', sublabel: 'Protected for food & transport' },
-      { label: 'Rent Coverage', value: '100% Ring-Fenced', sublabel: 'KES 22,000 locked 6 days early' },
+      { label: 'Safe Daily Spend', value: '£2,400', sublabel: 'Protected for food & transport' },
+      { label: 'Rent Coverage', value: 'Rent Budgeted', sublabel: '£22,000 included in the plan' },
       { label: 'Next Payday', value: '8 Days', sublabel: '+2 Night shifts pending payout' }
     ],
     features: [
@@ -23,9 +23,9 @@ const personas: Record<string, PersonaData> = {
       'Cushions against last-minute roster cancellations or illness'
     ],
     sampleEntries: [
-      { title: 'Night Shift Differential (12h)', category: 'Income', amount: '+KES 7,200', type: 'income', status: 'Completed' },
-      { title: 'House Rent (Due in 6d)', category: 'Safe Commitment', amount: '-KES 22,000', type: 'bill', status: 'Ring-fenced' },
-      { title: 'Emergency Cushion', category: 'Savings', amount: '+KES 1,500', type: 'savings', status: 'Transferred' },
+      { title: 'Night Shift Differential (12h)', category: 'Income', amount: '+£7,200', type: 'income', status: 'Completed' },
+      { title: 'House Rent (Due in 6d)', category: 'Safe Commitment', amount: '-£22,000', type: 'bill', status: 'Ring-fenced' },
+      { title: 'Emergency Cushion', category: 'Savings', amount: '+£1,500', type: 'savings', status: 'Transferred' },
     ]
   },
   freelance: {
@@ -34,12 +34,12 @@ const personas: Record<string, PersonaData> = {
     iconName: 'Laptop',
     badge: 'Feast & Famine Tamed',
     title: 'Master unpredictable invoice cycles with automated tax & runway buffers.',
-    quote: '"When a client pays KES 150,000, other apps think I\'m rich. Stedflo immediately sweeps 30% into tax reserve and stretches the rest across a 60-day calm runway."',
-    scenario: 'Brian M., Independent Product Designer & Dev',
+    quote: "A freelancer can set a tax buffer and spread a project payment across the days until the next expected invoice.",
+    scenario: "Illustrative freelance scenario",
     metrics: [
       { label: 'Cash Runway Buffer', value: '54 Days', sublabel: 'Covered through next 2 client cycles' },
-      { label: 'Tax Ring-Fence', value: 'KES 45,000', sublabel: 'Zero filing surprises' },
-      { label: 'Safe Daily Pace', value: 'KES 3,850', sublabel: 'Smooth predictable lifestyle' }
+      { label: 'Tax Ring-Fence', value: '£45,000', sublabel: 'Zero filing surprises' },
+      { label: 'Safe Daily Pace', value: '£3,850', sublabel: 'Smooth predictable lifestyle' }
     ],
     features: [
       'Automated withholding tax and statutory deduction ring-fencing',
@@ -48,9 +48,9 @@ const personas: Record<string, PersonaData> = {
       'Separates business project expenses from personal living allowances'
     ],
     sampleEntries: [
-      { title: 'Brand Identity Project Milestone', category: 'Client Payout', amount: '+KES 120,000', type: 'income', status: 'Received' },
-      { title: 'Income Tax Reserve (30%)', category: 'Tax Buffer', amount: '-KES 36,000', type: 'bill', status: 'Protected' },
-      { title: 'Studio Software Suite', category: 'SaaS Tooling', amount: '-KES 8,500', type: 'bill', status: 'Ring-fenced' }
+      { title: 'Brand Identity Project Milestone', category: 'Client Payout', amount: '+£120,000', type: 'income', status: 'Received' },
+      { title: 'Income Tax Reserve (30%)', category: 'Tax Buffer', amount: '-£36,000', type: 'bill', status: 'Protected' },
+      { title: 'Studio Software Suite', category: 'SaaS Tooling', amount: '-£8,500', type: 'bill', status: 'Ring-fenced' }
     ]
   },
   salaried: {
@@ -59,12 +59,12 @@ const personas: Record<string, PersonaData> = {
     iconName: 'Briefcase',
     badge: 'End-of-Month Freedom',
     title: 'Pace your monthly salary so week 4 feels just as calm as week 1.',
-    quote: '"My salary arrives on the 28th, but by the 20th of the following month I used to eat cheap noodles. Stedflo divided my true disposable income across 30 days. No more broke final week."',
-    scenario: 'Amina O., Operations Lead at Fintech Scale-up',
+    quote: "A salaried worker can account for monthly commitments and spread the remaining budget across the days until payday.",
+    scenario: "Illustrative salaried scenario",
     metrics: [
-      { label: 'Safe Daily Spend', value: 'KES 3,100', sublabel: 'Evenly paced every single day' },
-      { label: 'Fixed Bills Covered', value: 'KES 68,000', sublabel: 'Rent, WiFi, School, Insurance' },
-      { label: 'Monthly Savings Rate', value: '22% of Net', sublabel: 'Compounding in high-yield fund' }
+      { label: 'Safe Daily Spend', value: '£3,100', sublabel: 'Evenly paced every single day' },
+      { label: 'Fixed Bills Covered', value: '£68,000', sublabel: 'Rent, WiFi, School, Insurance' },
+      { label: 'Monthly Savings Rate', value: '22% of Net', sublabel: 'Example savings allocation' }
     ],
     features: [
       'Payday countdown ring shows exactly how much is safe to spend today',
@@ -73,9 +73,9 @@ const personas: Record<string, PersonaData> = {
       'Built-in splurge calculator: test a purchase before tapping your card'
     ],
     sampleEntries: [
-      { title: 'Monthly Salary Credit', category: 'Primary Income', amount: '+KES 145,000', type: 'income', status: 'Credited' },
-      { title: 'Apartment Lease & Service Charge', category: 'Living', amount: '-KES 42,000', type: 'bill', status: 'Ring-fenced' },
-      { title: 'High-Yield Emergency Fund', category: 'Wealth Target', amount: '+KES 25,000', type: 'savings', status: 'Funded' }
+      { title: 'Monthly Salary Credit', category: 'Primary Income', amount: '+£145,000', type: 'income', status: 'Credited' },
+      { title: 'Apartment Lease & Service Charge', category: 'Living', amount: '-£42,000', type: 'bill', status: 'Ring-fenced' },
+      { title: 'High-Yield Emergency Fund', category: 'Wealth Target', amount: '+£25,000', type: 'savings', status: 'Funded' }
     ]
   }
 };
@@ -91,7 +91,7 @@ export const PersonaSwitcher: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#173539]/5 border border-[#173539]/10 text-xs font-semibold text-[#234E53] uppercase tracking-wider mb-4">
-            <span>Adaptive Intelligence</span>
+            <span>Illustrative Scenarios</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#173539] tracking-tight mb-5 text-balance">
             Adapted to <span className="text-[#36656B]">how you actually earn.</span>
@@ -155,13 +155,13 @@ export const PersonaSwitcher: React.FC = () => {
                 {persona.title}
               </h3>
 
-              {/* Quote from real worker */}
+              {/* Illustrative planning scenario */}
               <div className="p-4 rounded-2xl bg-white border border-[#173539]/10 relative">
                 <p className="text-sm sm:text-base text-[#173539] italic mb-3">
                   {persona.quote}
                 </p>
                 <div className="text-xs font-semibold text-[#5E7875]">
-                  — {persona.scenario}
+                  {persona.scenario}
                 </div>
               </div>
 
@@ -201,7 +201,7 @@ export const PersonaSwitcher: React.FC = () => {
                 <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
                   <div className="text-xs font-bold text-neutral-200">Simulated Flow Ledger</div>
                   <span className="text-[10px] font-mono text-[#B7EF4A] bg-[#B7EF4A]/10 px-2 py-0.5 rounded-full">
-                    Auto-Synchronized
+                    Example data
                   </span>
                 </div>
 

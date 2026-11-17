@@ -1,3 +1,4 @@
+import { ApkDownloadLink } from './ApkDownloadLink';
 import React from 'react';
 import { ArrowDown, Check, ShieldCheck, Sparkles, Smartphone, Wallet, RefreshCw } from 'lucide-react';
 
@@ -5,20 +6,20 @@ export const HowItWorks: React.FC = () => {
   const steps = [
     {
       number: '01',
-      title: 'Log or Stream Your Income',
+      title: 'Log Your Income',
       desc: 'Whether you clock hourly shifts, collect freelance milestones, or receive a monthly salary on the 28th, input your earnings with zero friction. Stedflo adapts to single or multiple income streams.',
       highlight: 'Works with shifts, contracts & salaries'
     },
     {
       number: '02',
       title: 'Ring-Fence Your Commitments',
-      desc: 'List your rent, utilities, subscriptions, and savings goals. Stedflo places them in an untouchable virtual safety vault so they are never accidentally spent on weekend plans.',
-      highlight: '100% of upcoming bills protected'
+      desc: 'List your rent, utilities, subscriptions, and savings goals. Include these commitments in your budget before planning everyday spending.',
+      highlight: 'Account for upcoming bills'
     },
     {
       number: '03',
       title: 'Spend Your Daily Safe Runway',
-      desc: 'Open the app any time to see one calm, definitive number: your Daily Safe-to-Spend. If the screen says KES 2,800 is safe today, tap your card with total guilt-free peace of mind.',
+      desc: 'Open the app any time to see one calm, definitive number: your Daily Safe-to-Spend. If the screen says £2,800 is safe today, tap your card with total guilt-free peace of mind.',
       highlight: 'Recalculates every midnight'
     }
   ];
@@ -34,7 +35,7 @@ export const HowItWorks: React.FC = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#173539] tracking-tight mb-5 text-balance">
             From payday chaos to{' '}
-            <span className="text-[#36656B]">complete clarity in 2 minutes.</span>
+            <span className="text-[#36656B]">a clearer daily plan.</span>
           </h2>
           <p className="text-base sm:text-lg text-[#5E7875] leading-relaxed">
             No complex formulas or 40-category budgeting spreadsheets. Just 3 intuitive steps to take back control over your daily financial confidence.
@@ -85,23 +86,15 @@ export const HowItWorks: React.FC = () => {
                 The Core Equation
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 mb-3">
-                Income - (Upcoming Bills + Savings) ÷ Days Until Payday
+                (Income − Upcoming Bills − Savings) ÷ Days Until Payday
               </h3>
               <p className="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-2xl">
-                That single math equation eliminates 99% of personal finance anxiety. You never have to do mental gymnastics in supermarket queues or before ordering lunch.
+                A simple estimate helps you plan everyday spending around upcoming commitments. Keep your income, bills, and savings inputs up to date.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex justify-start lg:justify-end">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#B7EF4A] text-[#102629] font-bold text-sm hover:bg-[#a6e038] active:scale-95 transition-all shadow-[0_4px_16px_rgba(183,239,74,0.3)]"
-              >
-                <span>Calculate Your Runway Free</span>
-                <Sparkles className="w-4 h-4" />
-              </a>
+              <ApkDownloadLink className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#B7EF4A] text-[#102629] font-bold text-sm hover:bg-[#a6e038] active:scale-95 transition-all shadow-[0_4px_16px_rgba(183,239,74,0.3)]" />
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
-export type CurrencyCode = 'KES' | 'USD';
+export type CurrencyCode = 'GBP';
 
 export interface CurrencyConfig {
   code: CurrencyCode;
   symbol: string;
-  rateToKES: number; // 1 USD = ~130 KES
 }
 
 export interface PersonaData {

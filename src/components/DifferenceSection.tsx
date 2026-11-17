@@ -53,7 +53,7 @@ export const DifferenceSection: React.FC = () => {
                       Bank balance guesswork
                     </strong>
                     <span className="text-xs text-neutral-500 leading-normal">
-                      Seeing KES 30,000 in your account and assuming you can spend it, forgetting rent is due next Tuesday.
+                      Seeing £30,000 in your account and assuming you can spend it, forgetting rent is due next Tuesday.
                     </span>
                   </div>
                 </li>
@@ -139,7 +139,7 @@ export const DifferenceSection: React.FC = () => {
                       Real-time Payday Safety Runway
                     </strong>
                     <span className="text-xs text-neutral-300 leading-normal">
-                      One clear number that subtracts future bills and savings before you spend. If it says KES 3,200 is safe today, it is 100% safe.
+                      One clear number that subtracts future bills and savings before you spend. Use the estimate as a guide and update it as your plans change.
                     </span>
                   </div>
                 </li>

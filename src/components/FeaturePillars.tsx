@@ -29,7 +29,7 @@ export const FeaturePillars: React.FC = () => {
             <span className="text-[#4E9B56]">built for real income variability.</span>
           </h2>
           <p className="text-base sm:text-lg text-[#5E7875] leading-relaxed">
-            Every feature in Stedflo answers one simple question: <em>"Can I safely spend this today without jeopardizing my future commitments?"</em>
+            Illustrative product previews explore one simple question: <em>"Can I safely spend this today without jeopardizing my future commitments?"</em>
           </p>
         </div>
 
@@ -46,14 +46,14 @@ export const FeaturePillars: React.FC = () => {
                 Payday Safety Runway
               </h3>
               <p className="text-sm text-[#5E7875] leading-relaxed mb-6">
-                Factors in pending rent, utilities, and emergency savings cushions to output your true daily disposable balance. If your runway says KES 2,500, it is 100% guilt-free.
+                Factors in pending rent, utilities, and emergency savings cushions to output your true daily disposable balance. Your estimate changes as your income and commitments change.
               </p>
             </div>
 
             {/* Visual Runway Meter Snippet */}
             <div className="bg-[#F7F9F3] p-4 rounded-2xl border border-[#173539]/10">
               <div className="flex items-center justify-between text-xs mb-2">
-                <span className="font-semibold text-[#173539]">Live Runway Balance</span>
+                <span className="font-semibold text-[#173539]">Example Runway Balance</span>
                 <span className="text-[#4E9B56] font-bold">14 Days Clean</span>
               </div>
               <div className="w-full bg-[#173539]/10 h-2.5 rounded-full overflow-hidden">
@@ -61,7 +61,7 @@ export const FeaturePillars: React.FC = () => {
               </div>
               <div className="flex justify-between items-center text-[10px] text-[#5E7875] mt-2">
                 <span>Rent & Subscriptions Ring-Fenced</span>
-                <span className="font-mono text-[#173539]">KES 24,800 Safe</span>
+                <span className="font-mono text-[#173539]">£24,800 Safe</span>
               </div>
             </div>
           </div>
@@ -132,8 +132,8 @@ export const FeaturePillars: React.FC = () => {
             <div className="bg-[#F7F9F3] p-4 rounded-2xl border border-[#173539]/10 flex items-center justify-between">
               <div>
                 <span className="text-[10px] uppercase font-bold text-[#5E7875]">Emergency Cushion</span>
-                <div className="text-base font-bold text-[#173539]">KES 37,000 / 50,000</div>
-                <span className="text-xs text-[#4E9B56] font-medium">+KES 4,200 this month</span>
+                <div className="text-base font-bold text-[#173539]">£37,000 / 50,000</div>
+                <span className="text-xs text-[#4E9B56] font-medium">+£4,200 this month</span>
               </div>
               <div className="w-12 h-12 rounded-full border-4 border-[#B7EF4A] border-t-[#234E53] flex items-center justify-center text-xs font-bold text-[#173539]">
                 74%
@@ -165,17 +165,17 @@ export const FeaturePillars: React.FC = () => {
             </div>
           </div>
 
-          {/* Pillar 6: Bank-Grade Privacy & Security */}
+          {/* Pillar 6: Explore Before You Download */}
           <div className="rounded-3xl bg-white border border-[#173539]/10 p-8 shadow-[0_4px_24px_rgba(23,53,57,0.04)] hover:shadow-[0_12px_36px_rgba(23,53,57,0.08)] transition-all flex flex-col justify-between group">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#173539] text-[#B7EF4A] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                 <Lock className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-[#173539] tracking-tight mb-3">
-                Bank-Grade Privacy & Security
+                Explore Before You Download
               </h3>
               <p className="text-sm text-[#5E7875] leading-relaxed mb-6">
-                Your financial data belongs exclusively to you. Built with cryptographic password hashing, hardware device keystores, and a strict zero-ad-broker policy.
+                Explore the illustrative scenarios on this page. For questions about the mobile app and how it handles your data, contact the Stedflo team.
               </p>
             </div>
 
@@ -183,15 +183,15 @@ export const FeaturePillars: React.FC = () => {
             <div className="bg-[#173539] text-white p-4 rounded-2xl space-y-2 text-xs">
               <div className="flex items-center gap-2 text-neutral-200">
                 <CheckCircle className="w-4 h-4 text-[#B7EF4A] shrink-0" />
-                <span>AES-256 On-Device Keystore Storage</span>
+                <span>Illustrative income and bill scenarios</span>
               </div>
               <div className="flex items-center gap-2 text-neutral-200">
                 <CheckCircle className="w-4 h-4 text-[#B7EF4A] shrink-0" />
-                <span>Zero Data Selling or Third-Party Ads</span>
+                <span>No account needed to explore this page</span>
               </div>
               <div className="flex items-center gap-2 text-neutral-200">
                 <CheckCircle className="w-4 h-4 text-[#B7EF4A] shrink-0" />
-                <span>Biometric Touch ID / Face ID Authentication</span>
+                <span>Contact support with data questions</span>
               </div>
             </div>
           </div>

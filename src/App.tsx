@@ -9,24 +9,25 @@ import { HowItWorks } from './components/HowItWorks';
 import { FaqSection } from './components/FaqSection';
 import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
-import { IosWaitlistModal } from './components/IosWaitlistModal';
+import { IosAvailabilityModal } from './components/IosAvailabilityModal';
 import { PrivacyModal } from './components/PrivacyModal';
+import { AnalyticsConsent } from './components/AnalyticsConsent';
 
 export default function App() {
-  const [iosModalOpen, setIosModalOpen] = useState(false);
+  const [iosAvailabilityOpen, setIosAvailabilityOpen] = useState(false);
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#F7F9F3] text-[#173539] flex flex-col font-sans selection:bg-[#B7EF4A] selection:text-[#102629]">
       {/* Navigation Bar */}
-      <Navbar onOpenIosModal={() => setIosModalOpen(true)} />
+      <Navbar onOpenIosAvailability={() => setIosAvailabilityOpen(true)} />
 
       {/* Main Page Flow */}
       <main className="flex-1">
         {/* 1. Hero Section with Interactive Mockup */}
-        <Hero onOpenIosModal={() => setIosModalOpen(true)} />
+        <Hero onOpenIosAvailability={() => setIosAvailabilityOpen(true)} />
 
-        {/* 2. Trust & Quantitative Evidence Strip */}
+        {/* 2. Product Overview Strip */}
         <TrustProofStrip />
 
         {/* 3. The Stedflo Difference (Side-by-Side Comparison) */}
@@ -42,22 +43,23 @@ export default function App() {
         <HowItWorks />
 
         {/* 7. Frequently Asked Questions Accordion */}
-        <FaqSection onOpenIosModal={() => setIosModalOpen(true)} />
+        <FaqSection onOpenIosAvailability={() => setIosAvailabilityOpen(true)} />
 
         {/* 8. High-Impact Bottom CTA Banner */}
-        <CtaBanner onOpenIosModal={() => setIosModalOpen(true)} />
+        <CtaBanner onOpenIosAvailability={() => setIosAvailabilityOpen(true)} />
       </main>
 
       {/* Footer */}
       <Footer 
         onOpenPrivacyModal={() => setPrivacyModalOpen(true)}
-        onOpenIosModal={() => setIosModalOpen(true)}
+        onOpenIosAvailability={() => setIosAvailabilityOpen(true)}
       />
 
+      <AnalyticsConsent />
       {/* Interactive Modals */}
-      <IosWaitlistModal
-        isOpen={iosModalOpen}
-        onClose={() => setIosModalOpen(false)}
+      <IosAvailabilityModal
+        isOpen={iosAvailabilityOpen}
+        onClose={() => setIosAvailabilityOpen(false)}
       />
 
       <PrivacyModal

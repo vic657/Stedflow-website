@@ -1,11 +1,12 @@
+import { ApkDownloadLink } from './ApkDownloadLink';
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-  onOpenIosModal: () => void;
+  onOpenIosAvailability: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenIosAvailability }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -41,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
           </a>
 
           {/* Zone 2: Navigation Links (Single-line, unboxed, subtle hover) */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#173539]/80">
+          <nav className="hidden xl:flex items-center gap-8 text-sm font-medium text-[#173539]/80">
             <a
               href="#features"
               className="hover:text-[#173539] transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-4 decoration-[#B7EF4A] decoration-2"
@@ -75,49 +76,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
           </nav>
 
           {/* Zone 3: Primary Action & Quick Store Badges */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          <div className="hidden xl:flex items-center gap-3 shrink-0">
             <button
-              onClick={onOpenIosModal}
+              onClick={onOpenIosAvailability}
               className="text-xs font-semibold text-[#234E53] hover:text-[#173539] px-2.5 py-1.5 transition-colors whitespace-nowrap inline-flex items-center gap-1 hover:underline underline-offset-2"
             >
-              <span>iOS Waitlist</span>
-              <span className="text-[10px] bg-[#B7EF4A]/40 text-[#173539] px-1.5 py-0.5 rounded font-mono font-medium">Soon</span>
+              <span>iOS availability</span>
+              <span className="text-[10px] bg-[#B7EF4A]/40 text-[#173539] px-1.5 py-0.5 rounded font-mono font-medium">Info</span>
             </button>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#173539] text-white text-xs font-semibold hover:bg-[#234E53] active:scale-[0.98] transition-all shadow-[0_2px_10px_rgba(23,53,57,0.18)] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7EF4A]"
-            >
-              <img
-                src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
-                alt="Google Play"
-                className="w-4 h-4 object-contain brightness-0 invert"
-              />
-              <span>Get App</span>
-              <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
-            </a>
+            <ApkDownloadLink className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#173539] text-white text-xs font-semibold hover:bg-[#234E53] active:scale-[0.98] transition-all shadow-[0_2px_10px_rgba(23,53,57,0.18)] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7EF4A]" />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#173539] text-white text-xs font-semibold"
-            >
-              <img
-                src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
-                alt="Google Play"
-                className="w-3.5 h-3.5 object-contain brightness-0 invert"
-              />
-              <span>Get App</span>
-            </a>
+          <div className="flex xl:hidden items-center gap-2">
+            <ApkDownloadLink className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#173539] text-white text-xs font-semibold" />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-[#173539] hover:bg-[#173539]/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#234E53]"
               aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -127,8 +105,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-[#173539]/10 bg-[#F7F9F3] px-6 py-5 shadow-xl transition-all">
-          <nav className="flex flex-col gap-4 text-base font-medium text-[#173539]">
+        <div className="xl:hidden border-b border-[#173539]/10 bg-[#F7F9F3] px-6 py-5 shadow-xl transition-all">
+          <nav id="mobile-navigation" className="flex flex-col gap-4 text-base font-medium text-[#173539]">
             <a
               href="#features"
               onClick={() => setMobileMenuOpen(false)}
@@ -165,27 +143,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenIosModal }) => {
               Frequently Asked Questions
             </a>
             <div className="pt-4 border-t border-[#173539]/10 flex flex-col gap-2.5">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.stedflo.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 text-center py-2.5 px-4 rounded-xl bg-[#173539] text-white font-semibold text-sm hover:bg-[#234E53]"
-              >
-                <img
-                  src="/assets/aistudio/logo-google-playstore-svgrepo-com_e4164103.svg"
-                  alt="Google Play"
-                  className="w-4 h-4 object-contain brightness-0 invert"
-                />
-                <span>Download on Google Play</span>
-              </a>
+              <ApkDownloadLink className="w-full inline-flex items-center justify-center gap-2 text-center py-2.5 px-4 rounded-xl bg-[#173539] text-white font-semibold text-sm hover:bg-[#234E53]" />
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onOpenIosModal();
+                  onOpenIosAvailability();
                 }}
                 className="w-full text-center py-2.5 px-4 rounded-xl bg-white border border-[#173539]/15 text-[#173539] font-semibold text-sm hover:bg-neutral-50"
               >
-                Join iOS App Store Waitlist
+                View iOS availability
               </button>
             </div>
           </nav>

@@ -3,37 +3,37 @@ import { ChevronDown, HelpCircle, Mail, MessageCircleQuestion } from 'lucide-rea
 import { FaqItem } from '../types';
 
 interface FaqProps {
-  onOpenIosModal: () => void;
+  onOpenIosAvailability: () => void;
 }
 
-export const FaqSection: React.FC<FaqProps> = ({ onOpenIosModal }) => {
+export const FaqSection: React.FC<FaqProps> = ({ onOpenIosAvailability }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
 
   const faqs: FaqItem[] = [
     {
       category: 'Calculations & Runway',
-      question: 'How does Stedflo calculate my Payday Safety score?',
-      answer: 'Your Payday Safety score (from 0 to 100) measures whether your current cash and projected income comfortably cover your commitments until your next payday. Stedflo calculates your upcoming scheduled bills (rent, WiFi, utilities, debt), factors in your chosen savings rate, and divides the remaining disposable cash across the days left until payday. A score above 80 means all bills are safely ring-fenced with a healthy daily cushion.'
+      question: 'How is the daily runway estimated?',
+      answer: "The daily runway estimate subtracts upcoming bills and your savings buffer from available income, then spreads the remainder across the days until payday. The examples on this page are illustrative; your estimate depends on the information you enter."
     },
     {
-      category: 'Pricing',
-      question: 'Is Stedflo free to use?',
-      answer: 'Yes! Stedflo is free to download and start using immediately. The core features—including the live Payday Safety Runway, shift and hourly logging, bill ring-fencing, and daily safe-to-spend calculations—are 100% free with no annoying advertisements or paywalls on your essential cash flow.'
+      category: 'Downloads',
+      question: 'How can I get the Android app?',
+      answer: "Use the Android APK download button when it is available. If it says APK coming soon, a download link has not been published here yet. Contact support for current app pricing and feature availability."
     },
     {
       category: 'Product Comparison',
       question: 'How is this different from regular budgeting apps?',
-      answer: 'Traditional expense trackers are backward-looking and guilt-inducing: they show you historical pie charts of where you already failed. Stedflo is calm and forward-looking. By ring-fencing your upcoming rent and fixed bills first, Stedflo gives you one actionable number: your Daily Safe-to-Spend. If you spend within that daily runway, you never have to worry about running out of money before payday.'
+      answer: "Stedflo focuses on planning ahead: account for upcoming bills and savings before estimating everyday spending. Keep the information up to date as income and expenses change."
     },
     {
       category: 'Privacy & Security',
       question: 'How is my personal and financial data secured?',
-      answer: 'We treat your privacy with extreme discipline. Stedflo uses bank-grade AES-256 encryption and stores your credentials securely on your device keystore. Most importantly: we have a strict zero-ad-broker policy. We never sell, rent, or share your financial data with third-party data brokers, insurers, or advertisers.'
+      answer: "This landing page does not ask for your financial records or create an account. Its iOS availability notice does not collect email addresses. For details about data handling in the mobile app, contact support before sharing personal or financial information."
     },
     {
       category: 'Platform Availability',
       question: 'When is the iOS / App Store version releasing?',
-      answer: 'Stedflo is currently live on Google Play for Android devices! The iOS build has been submitted to Apple and is undergoing App Store review. You can join the iOS Priority Waitlist using the button in the top navigation to receive an instant TestFlight invitation and be notified the exact hour it goes live on the App Store in Q1 2026.'
+      answer: "An iOS release date has not been announced. This page does not offer an iOS signup or TestFlight invitation. Check back here for availability information."
     }
   ];
 
@@ -55,7 +55,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenIosModal }) => {
             Frequently Asked Questions
           </h2>
           <p className="text-base sm:text-lg text-[#5E7875] max-w-xl mx-auto">
-            Everything you need to know about the Stedflo methodology, privacy guarantees, and mobile release schedule.
+            Everything you need to know about the Stedflo methodology, website privacy, and mobile availability.
           </p>
         </div>
 
@@ -98,10 +98,10 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenIosModal }) => {
                     {index === 4 && (
                       <div className="mt-4">
                         <button
-                          onClick={onOpenIosModal}
+                          onClick={onOpenIosAvailability}
                           className="inline-flex items-center gap-2 text-xs font-bold text-[#234E53] bg-[#B7EF4A]/30 hover:bg-[#B7EF4A]/50 px-3 py-1.5 rounded-lg transition-colors"
                         >
-                          <span>Join the iOS Waitlist</span>
+                          <span>View iOS availability</span>
                           <span>→</span>
                         </button>
                       </div>
@@ -117,14 +117,14 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenIosModal }) => {
         <div className="mt-12 text-center p-8 bg-[#F7F9F3] rounded-3xl border border-[#173539]/10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left">
             <h3 className="text-lg font-bold text-[#173539]">Have a specific question?</h3>
-            <p className="text-xs sm:text-sm text-[#5E7875]">Our product team responds personally to all questions within 24 hours.</p>
+            <p className="text-xs sm:text-sm text-[#5E7875]">Contact the Stedflo team for product and availability questions.</p>
           </div>
           <a
-            href="mailto:support@stedflo.com"
+            href="mailto:info@stedflo.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-[#173539]/15 text-xs font-semibold text-[#173539] hover:bg-neutral-50 transition-colors shadow-2xs whitespace-nowrap shrink-0"
           >
             <Mail className="w-3.5 h-3.5 text-[#4E9B56]" />
-            <span>support@stedflo.com</span>
+            <span>info@stedflo.com</span>
           </a>
         </div>
 
